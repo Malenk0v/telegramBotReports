@@ -11,12 +11,12 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 public class Bot extends TelegramLongPollingBot {
     @Override
     public String getBotUsername() {
-        return "TestBotGlebWorking_bot";
+        return "ReportsHelperBot";
     }
 
     @Override
     public String getBotToken() {
-        return "5111604642:AAFRAyrtwQSNQ1tscbGT7OL1j1mWzALLzEk";
+        return "5257318222:AAH2Y_HMCpzwjitjkFaWJr7am7FAl14O6VM";
     }
     String chat_id;
     String login;
