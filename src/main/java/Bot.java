@@ -66,13 +66,13 @@ public class Bot extends TelegramLongPollingBot {
             SendMessage sendMessage = new SendMessage();
             sendMessage.setChatId(chat_id);
 
-            String nameRepost = update.getCallbackQuery().getMessage().getText();
+            String nameRepost = update.getCallbackQuery().ge;
 
             InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
             AnswerKeybordRepost.answer(update,inlineKeyboardMarkup,login);
 
             try {
-                sendMessage.setText("Выберите период отчета "+"\""+nameRepost+"\"");
+                sendMessage.setText("Выберите период отчета ");
                 sendMessage.setReplyMarkup(inlineKeyboardMarkup);
                 execute(sendMessage);
             } catch (TelegramApiException e) {
