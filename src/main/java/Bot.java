@@ -73,7 +73,7 @@ public class Bot extends TelegramLongPollingBot {
             AnswerKeybordRepost.answer(update,inlineKeyboardMarkup,login);
 
             try {
-                sendMessage.setText("Выберите период отчета "+ AnswerKeybordRepost.getNameRepost());
+                sendMessage.setText("Выберите период отчета "+"\""+AnswerKeybordRepost.getNameRepost()+"\"");
                 sendMessage.setReplyMarkup(inlineKeyboardMarkup);
                 execute(sendMessage);
             } catch (TelegramApiException e) {
