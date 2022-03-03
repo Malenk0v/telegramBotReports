@@ -12,7 +12,7 @@ public class CreateKeybordRepost {
 
     public static void createRepost(InlineKeyboardMarkup inlineKeyboardMarkup) {
         InlineKeyboardButton but1 = createButton("365 by months", "/365");
-        InlineKeyboardButton but2 = createButton("По кампаниям", "/comp");
+        InlineKeyboardButton but2 = createButton("По типу площадки", "/plosh");
         InlineKeyboardButton but3 = createButton("Форматы", "/form");
 
         List<InlineKeyboardButton> line1 = new ArrayList<>();
