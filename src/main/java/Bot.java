@@ -66,7 +66,7 @@ public class Bot extends TelegramLongPollingBot {
             SendMessage sendMessage = new SendMessage();
             sendMessage.setChatId(chat_id);
 
-            String nameRepost = update.getCallbackQuery().toString();
+            String nameRepost = update.getCallbackQuery().getMessage().getText();
 
             InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
             AnswerKeybordRepost.answer(update,inlineKeyboardMarkup,login);
