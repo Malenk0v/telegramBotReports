@@ -1,6 +1,7 @@
 import Method.AnswerKeybordRepost;
 import Method.Command;
 import Method.CreateKeybordRepost;
+import Method.CreateUrls;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.AnswerCallbackQuery;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -72,7 +73,7 @@ public class Bot extends TelegramLongPollingBot {
             AnswerKeybordRepost.answer(update,inlineKeyboardMarkup,login);
 
             try {
-                sendMessage.setText("Выберите период отчета ");
+                sendMessage.setText("Выберите период отчета "+ AnswerKeybordRepost.getNameRepost());
                 sendMessage.setReplyMarkup(inlineKeyboardMarkup);
                 execute(sendMessage);
             } catch (TelegramApiException e) {
