@@ -1,7 +1,6 @@
 import Method.AnswerKeybordRepost;
 import Method.Command;
 import Method.CreateKeybordRepost;
-import Method.CreateUrls;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.AnswerCallbackQuery;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -28,6 +27,7 @@ public class Bot extends TelegramLongPollingBot {
 
 
         if(update.hasMessage() && update.getMessage().getText().equals("/start") ){
+            // Обработка команд
             SendMessage sendMessage = new SendMessage();
             sendMessage.setChatId(update.getMessage().getChatId().toString());
             text = update.getMessage().getText();
@@ -42,6 +42,7 @@ public class Bot extends TelegramLongPollingBot {
             }
         }
         else if(update.hasMessage()){
+            // Обработка логина
             SendMessage sendMessage = new SendMessage();
             chat_id = update.getMessage().getChatId().toString();
             login = update.getMessage().getText();
@@ -62,6 +63,7 @@ public class Bot extends TelegramLongPollingBot {
             }
         }
         else if(update.hasCallbackQuery()){
+            //Обработка нажатия инлайн клавиатуры.
             AnswerCallbackQuery answerCallbackQuery = new AnswerCallbackQuery();
             answerCallbackQuery.setCallbackQueryId(update.getCallbackQuery().getId());
             SendMessage sendMessage = new SendMessage();
